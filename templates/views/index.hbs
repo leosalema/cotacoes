@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Primeiro Site</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+    </head>
+    <body>
+        <div class="main-content">
+        {{> header}}
+        </div>
+        <P>Produre por um ativo</P>
+        <form>
+            <input name='ativo' id='ativo' type='text' placeholder="Código do ativo">
+            <button>Buscar</button>
+        </form>
+        <h3></h3>
+        <p id='price'></p>
+        <p id='day-low'></p>
+        <p id='day-high'></p>
+        {{> footer}} 
+        <script type="text/javascript" src="./js/app.js"></script>
+    </body>
+</html>
