@@ -17,13 +17,14 @@ const cotacao = (symbol, callback) => {
             callback({
                 message: `No data found`
             }, undefined);
+        } else {
+            // console.log(response.body.data[0])
+            const dataParse = response.body.data[0];
+    
+            const { symbol, price, day_low, day_high } = dataParse;
+    
+            callback(undefined, { symbol, price, day_low, day_high })
         }
-        // console.log(response.body.data[0])
-        const dataParse = response.body.data[0];
-
-        const { symbol, price, day_low, day_high } = dataParse;
-
-        callback(undefined, { symbol, price, day_low, day_high })
     })
 } 
 
