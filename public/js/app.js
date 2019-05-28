@@ -17,7 +17,7 @@ cotacoesForm.addEventListener ('submit', event => {
     return;
   }
 
-  const url = 'http://localhost:3000/cotacoes?ativo=';
+  const url = '/cotacoes?ativo=';
 
   fetch (`${url}${ativo}`).then (response => {
     response.json ().then (data => {
